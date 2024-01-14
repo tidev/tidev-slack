@@ -4,8 +4,7 @@ WORKDIR /app
 COPY . /app
 
 RUN corepack enable && \
-	pnpm install --frozen-lockfile && \
-	pnpm run build
+	pnpm install --frozen-lockfile
 
 ENV NODE_ENV production
 EXPOSE 80/tcp
